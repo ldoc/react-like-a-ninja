@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,13 +23,14 @@
   "bugs": {
     "url": "https://github.com/ldoc/react-babel-webpack/issues"
   },
-  "homepage": "https://github.com/ldoc/react-babel-webpack#readme",
+  "homepage": "https://ldoc.github.io/react-like-a-ninja/.",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "gh-pages": "^2.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.1.3",

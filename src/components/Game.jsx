@@ -1,8 +1,17 @@
-import React from "react";
-import {Board} from "./Board.jsx";
+import React, {useEffect} from "react";
+import { Board } from "./Board.jsx";
+import { Score } from "./Score.jsx";
 
 export const Game = () => {
-    return <div class='game'>
-        <Board></Board>
-    </div>;
+
+  useEffect(() => {
+    screen.orientation.lock('landscape');
+  },[]);
+
+  return <div id='game' className='game'>
+    <Board>
+      <Score points={230}/>
+      <rect fill="white" y="-10" x="0" width="50" height="50"/>
+    </Board>
+  </div>;
 }
